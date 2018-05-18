@@ -1,0 +1,8 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    socket.emit('message','chat');
+    socket.on('message_response',function (msg) {
+        console.log("Response ",msg);
+    });
+</script>
